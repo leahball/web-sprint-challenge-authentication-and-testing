@@ -10,9 +10,9 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Setup
 
-- [ ] Run `npm install` to install your dependencies.
-- [ ] Build your database executing `npm run migrate`.
-- [ ] Run tests locally executing `npm test`.
+- [X] Run `npm install` to install your dependencies.
+- [X] Build your database executing `npm run migrate`.
+- [X] Run tests locally executing `npm test`.
 
 ## Project Instructions
 
@@ -54,6 +54,23 @@ Your finished project must include all of the following requirements (further in
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
+
+answer: Session based authentication is where the user state is stored on the server’s memory. In session based auth system, the server creates and stores the session data in the server memory when the user logs in and then stores the session Id in a cookie on the user browser.
+The session Id is then sent on subsequent requests to the server and the server compares it with the stored session data and proceeds to process the requested action. 
+Token based authentication --the user state is stored on the client.  In the token based authentication, the user data is encrypted into a JWT (JSON Web Token) with a secret and then sent back to the client. The JWT is then stored on the client side mostly localStorage and sent as a header for every subsequent request. The server receives and validates the JWT before proceeding to send a response to the client.
+
 2. What does `bcryptjs` do to help us store passwords in a secure manner?
+
+answer: Bcrypt incorporates hash encryption along with a work factor, which allows you to determine how expensive the hash function will be (i.e. how long it takes to decrypt it by brute force measures).
+
 3. How are unit tests different from integration and end-to-end testing?
+
+answer: unit tests are to verify wether a small and isolated piece of the codebase (often functions or methods) behaves as the developer intended. they run often and need to be fast and are preferred tool for test driven development (TDD)
+
 4. How does _Test Driven Development_ change the way we write applications and tests?
+
+answer: a good test is independent, focused and tests only one unit of code. Tests only what needs to be tested and no more. Doesn't rely on other tests. Usually you want the test failing, write a little code to get it to pass then refractor it.
+
+
+
+
