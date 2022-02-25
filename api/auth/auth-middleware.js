@@ -1,6 +1,6 @@
 const User = require("../users/users-model");
 const jwt = require('jsonwebtoken')
-const { JWT_SECRET } = require('../secrets/index')
+const { JWT_SECRET } = require('../config/index')
 
 const checkUsernameValid = async (req, res, next) => {
   try {
