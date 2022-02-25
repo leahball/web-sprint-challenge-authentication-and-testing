@@ -1,8 +1,8 @@
-const { checkUsernameExists } = require('./auth-middleware');
+const { checkUsernameUnique } = require('./auth-middleware');
 
 const router = require('express').Router();
 
-router.post('/register', checkUsernameExists, (req, res) => {
+router.post('/register', checkUsernameUnique, (req, res) => {
   res.end('implement register, please!');
   /*
     IMPLEMENT
