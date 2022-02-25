@@ -1,5 +1,7 @@
 const { JWT_SECRET } = require("../secrets"); // use this secret!
 const jwt = require('jsonwebtoken');
+const { default: jwtDecode } = require("jwt-decode");
+
 
 module.exports = (req, res, next) => {
   const token = req.headers.authorization
